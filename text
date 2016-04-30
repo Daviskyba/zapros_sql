@@ -1,0 +1,34 @@
+Создание базы данных
+CREATE DATABASE Credit`;
+
+Удаление базы данных
+DROP DATABASE `Credit`;
+
+Создание таблицы users c такими полями
+CREATE TABLE `users` (
+  `id` int NOT NULL AUTO_INCREMENT PRIMARY KEY,  - id - целое число, первичный ключ, автоинкримент
+  `name` text(35) NULL,  - name - строка длинной 35 (может быть пустым)
+  `surname` text(35) NULL,  - name - строка длинной 35 (может быть пустым)
+  `email` text(60) NOT NULL,  - email - строка длинной 60 (не может быть пустым)
+  `password` text(100) NOT NULL,  - password - строка длинной 100 (не может быть пустым)
+  `age` int NULL,  - age - целое число (может быть пустым)
+  `is_active` int NOT NULL,   - is_active - целое число (не может быть пустым)
+  `is_admin` int NOT NULL    - is_admin - целое число (не может быть пустым)
+);
+
+Очистка таблицы users
+TRUNCATE TABLE users
+
+Полное удаление таблицы users
+DROP TABLE `users`;
+
+Написать SQL на 4 CRUD операции в таблице users
+
+SELECT * FROM users;
+
+INSERT INTO users (id, name, surname, email, password, age, is_active, is_admin)
+VALUES (NULL, Andrew, Daviskyba, tizy@ukr.net, rutina55, 22, internet, MyAmin);
+
+UPDATE user SET name = 'Paul' WHERE id = 1;
+
+DELETE FROM user WHERE id = 1;
